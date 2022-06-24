@@ -1,0 +1,191 @@
+#scoreboard{
+    position: relative;
+    width: 533px;
+    height: 281px;
+    
+    background-color: ghostwhite;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+#clockBox{
+    position: absolute;
+    width: 127px;
+    height: 45px;
+    left: 203px;
+    top: 16px; 
+    background-color:rgb(118, 122, 122) ;
+    border-radius: 7px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #fff;
+    text-align: center;
+}
+.score{
+background: #fff;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+border-radius: 7px;
+border: 2px solid #000000;
+font-family: "Times New Roman", Times, serif; ;
+font-style: normal;
+font-weight: 600;
+font-size: 55px;
+color: #000000;
+text-align: center;
+width: 100px;
+height: 75px;
+}
+#home{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+#home p{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: 600;
+}
+
+#away{
+    position: absolute;
+left: 413px;
+top: 50px;
+}
+ #away p{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: 600;
+}
+.add{
+   width:120px; 
+   margin-top: 6px; 
+   margin-left:1px;
+}
+.add .butn{
+    background-color:#fff;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #000000;
+    font-size:14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    cursor:pointer;
+    text-align: center;
+    box-shadow: 0px, 4px, 4px,rgba(0, 0, 0, 1);
+}
+
+#play{
+    position: absolute;
+width: 24px;
+height: 18px;
+left: 210px;
+top: 66px;
+border-radius: 5px;
+background-color: rgb(208, 200, 200);
+text-align: center;
+font-size: 500;
+border: 1px solid black;
+}
+#pause{
+    position: absolute;
+width: 24px;
+height: 18px;
+left: 255px;
+top: 66px;
+border-radius: 5px;
+background-color: rgb(208, 200, 200);
+text-align: center;
+font-size: 500;
+border: 1px solid black;
+}
+#stop{
+    position: absolute;
+width: 24px;
+height: 18px;
+left: 300px;
+top: 66px;
+border-radius: 5px;
+background-color: rgb(208, 200, 200);
+text-align: center;
+font-size: 500;
+border: 1px solid black;
+}
+#logo{
+background-image: url("logo.png");
+position: absolute;
+width: 85px;
+height: 85px;
+left: 230px;
+top: 110px;
+border-radius: 50%;
+}
+#restart{
+    position: absolute;
+left: 222px;
+top: 230px;
+cursor: pointer;
+background-color: #198754;
+border: none;
+width: 105px;
+height: 30px;
+border-radius: 5px;
+color: #fff;
+font-size:500;
+font-weight: 500;
+}
+@media only screen and (max-width: 540px) {
+    #scoreboard{
+        width: 100%;
+        height: 300px;
+    }
+    .score{
+        width: 70%;
+    }
+    #away{
+        left: 78%;
+    }
+    #home{
+        left: 3%;
+    }
+    #logo{
+        left: 43%;
+    }
+    #restart{
+        left: 43%;
+        width: 20%;
+    }
+    #clockBox{
+        left: 38%;
+        width: 25%;
+    }
+    #play{
+        left: 40%;
+        width: 4%;
+    }
+    #pause{
+        left: 48%;
+        width: 4%;
+    }
+    #stop{
+        left: 56.5%;
+        width: 4%;
+    }
+    .add .butn{
+        width: 15%;
+    }
+    #home p{
+        text-align:start;
+    }
+    #away p{
+        text-align:start;
+    }
+}
+
