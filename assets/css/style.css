@@ -111,3 +111,9 @@
         transform: translateY(50%);
     }
 }
+@media only screen and (min-width: 992px){
+    #scoreboard{
+        width: 35%;
+        transform: translateY(30%);
+    }
+}
