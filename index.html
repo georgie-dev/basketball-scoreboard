@@ -7,7 +7,7 @@
   <!--    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">-->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body onload="checkCookie()">
+    <body>
         <div id="scoreboard">
             <div id="timer">
                 <div id="clockBox"></div>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div id="scores">
-                <div id="home">
+                <div class="scorebox">
                     <p>HOME</p>
                 <div class="score" id="homescore">0</div>
                 <div class="add">
@@ -28,7 +28,11 @@
                     <div class="butn" id="hminus">-1</div>
                 </div>
                 </div>
-                <div id="away">
+                <div id="logo-area">
+                    <div id="logo"></div>
+                <button id="restart" class="btn btn-success">New Game</button>
+        </div>
+                <div class="scorebox">
                     <p>GUESTS</p>
                 <div class="score" id="awayscore">0</div>
                 <div class="add">
@@ -39,9 +43,7 @@
                 </div>
                 </div>
                 </div>
-                <div id="logo"></div>
-                <button id="restart" class="btn btn-success">New Game</button>
-        </div>
+            </div>
         <script src="assets/js/index.js"></script>
     </body>
 </html>
