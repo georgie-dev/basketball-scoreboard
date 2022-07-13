@@ -1,7 +1,10 @@
 #basketball-scoreboard
 This is a simple responsive basketball scoreboard web app
+It is most Suitable for mobile View
 Designed by Manger George
 
 It also includes a timer to track score and time of a Live basketball Match
 
 This is also my first Git repository
+
+Live Link: https://anchors-basketball-scoreboard.netlify.app/
