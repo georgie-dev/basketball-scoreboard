@@ -107,7 +107,7 @@
 }
 @media only screen and (min-width: 600px) {
     #scoreboard{
-        width: 80%;
+        width: 70%;
         transform: translateY(50%);
     }
 }
