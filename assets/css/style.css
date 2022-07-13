@@ -2,7 +2,6 @@
     position: relative;
     width: 500px;
     height: 300px;
-    
     background-color: ghostwhite;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
     margin-left: auto;
@@ -11,14 +10,14 @@
 }
 #timer{
     display: block;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left:auto;
     margin-right: auto;
     width: 30%;
     height: auto;
+    transform: translateY(20%);
 }
 #clockBox{
-    background-color: aliceblue;
     width: 90%;
     height: 40px;
     margin-left: auto;
@@ -31,47 +30,84 @@
     border-radius: 5px;
     background-color: #000;
     color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 #buttons{
     display: flex;
     margin:5px;
     justify-content: space-evenly;
 }
+#play ,#pause ,#stop{
+    padding-left:4px;
+    padding-right:4px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: grab;
+}
 #scores{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 #logo{
-    background-image: url('logo.png');
+    background-image: url("logo.png");
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin-top: 40px;
+    }
+#restart{
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    background-color:seagreen;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: grab;
 }
 .scorebox{
     display: block;
-    width: 17%;
+    width: 18%;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: large;
 }
 .score{
     width: 100%;
     height: 70px;
-    border: 1px solid #000;
+    border: 2px solid #000;
     border-radius: 10px;
     text-align: center;
     font-size: 60px;
     color: #000;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
-
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 .add{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 5px;
+    margin-left: 5px;
 }
 .butn{
-    border: 1px solid #000;
+    border: 2px solid #000;
     border-radius: 5px;
     font-size: small;
     padding: 1px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: grab;
+}
+@media only screen and (min-width: 600px) {
+    #scoreboard{
+        width: 80%;
+        transform: translateY(50%);
+    }
 }
