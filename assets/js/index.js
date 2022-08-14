@@ -2,52 +2,70 @@ let timer= document.getElementById("clockBox");
 let home=document.getElementById("homescore");
 let away=document.getElementById("awayscore");
 
-let homeS=Number.parseInt(home.innerHTML,10);
-let awayS=Number.parseInt(away.innerHTML,10)
 
 
 //buttons to Add away Score
 document.getElementById("aone").addEventListener('click',()=>{
-    let d= away.innerHTML;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
+  let d= JSON.parse(localStorage.getItem("awayScore"));
   let e= Number.parseInt(d,10);
-away.innerHTML=e+1
+  away.innerHTML=e+1;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
 })
 document.getElementById("atwo").addEventListener('click',()=>{
-    let d=away.innerHTML;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
+  let d= JSON.parse(localStorage.getItem("awayScore"));
   let e= Number.parseInt(d,10);
-  away.innerHTML=e+2
+  away.innerHTML=e+2;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
 })
 document.getElementById("athree").addEventListener('click',()=>{
-    let d= away.innerHTML;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
+  let d= JSON.parse(localStorage.getItem("awayScore"));
   let e= Number.parseInt(d,10);
-  away.innerHTML=e+3
+  away.innerHTML=e+3;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
 })
 document.getElementById("aminus").addEventListener('click',()=>{
-    let d= away.innerHTML;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
+  let d= JSON.parse(localStorage.getItem("awayScore"));
   let e= Number.parseInt(d,10);
-  away.innerHTML=e-1
+  away.innerHTML=e-1;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
 })
  //buttons to add Home Score
 document.getElementById("hone").addEventListener('click',()=>{
-    let d= home.innerHTML;
+  localStorage.setItem("homeScore", JSON.stringify(home.innerHTML))
+  let d= JSON.parse(localStorage.getItem("homeScore"));
   let e= Number.parseInt(d,10);
- home.innerHTML=e+1
+  console.log(d)
+  home.innerHTML=e+1;
+  localStorage.setItem("homeScore", JSON.stringify(home.innerHTML))
 })
 document.getElementById("htwo").addEventListener('click',()=>{
-    let d= home.innerHTML;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
+  let d= JSON.parse(localStorage.getItem("homeScore"));
   let e= Number.parseInt(d,10);
-  home.innerHTML=e+2
+  home.innerHTML=e+2;
+  localStorage.setItem("homeScore", JSON.stringify(home.innerHTML))
 })
 document.getElementById("hthree").addEventListener('click',()=>{
-    let d=home.innerHTML;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
+  let d= JSON.parse(localStorage.getItem("homeScore"));
   let e= Number.parseInt(d,10);
-  home.innerHTML=e+3
+  home.innerHTML=e+3;
+  localStorage.setItem("homeScore", JSON.stringify(home.innerHTML))
 })
 document.getElementById("hminus").addEventListener('click',()=>{
-    let d= home.innerHTML;
+  localStorage.setItem("awayScore", JSON.stringify(away.innerHTML))
+  let d= JSON.parse(localStorage.getItem("homeScore"));
   let e= Number.parseInt(d,10);
-  home.innerHTML=e-1
+  home.innerHTML=e-1;
+  localStorage.setItem("homeScore", JSON.stringify(home.innerHTML))
 })
+
+away.innerHTML=JSON.parse(localStorage.getItem("awayScore")) || 0;
+home.innerHTML=JSON.parse(localStorage.getItem("homeScore")) || 0;
 
 
 //new game button
@@ -63,10 +81,12 @@ document.getElementById("restart").addEventListener('click', ()=>{
 
 
 //timer
-let counter= setInterval("timerCycle()", 1000)
-let min = "00"
-let sec = "00";
+let min = JSON.parse(localStorage.getItem("mintimer"));
+let sec = JSON.parse(localStorage.getItem("sectimer"));
 let stoptime = true;
+let counter= setInterval("timerCycle()", 1000)
+
+//timer stopper
 document.getElementById("stop").addEventListener("click",()=>{
     stoptime=true
     timer.innerHTML="00:00"
@@ -77,7 +97,7 @@ document.getElementById("stop").addEventListener("click",()=>{
 
 
 function timerCycle() {
-    if (stoptime == false) {
+    if (stoptime == false ) {
     sec = Number.parseInt(sec);
     min = Number.parseInt(min);
 
@@ -105,8 +125,9 @@ function timerCycle() {
       min = '0' + min;
     }
   }
-
-  timer.innerHTML = `${min}:${sec}`
+  localStorage.setItem("mintimer", JSON.stringify(min))
+  localStorage.setItem("sectimer", JSON.stringify(sec))
+  timer.innerHTML = `${JSON.parse(localStorage.getItem("mintimer"))}:${JSON.parse(localStorage.getItem("sectimer"))}`
 }
 document.getElementById("play").addEventListener("click",()=>{
     if (stoptime == true) {
