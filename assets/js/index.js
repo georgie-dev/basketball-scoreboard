@@ -81,8 +81,8 @@ document.getElementById("restart").addEventListener('click', ()=>{
 
 
 //timer
-let min = JSON.parse(localStorage.getItem("mintimer"));
-let sec = JSON.parse(localStorage.getItem("sectimer"));
+let min = JSON.parse(localStorage.getItem("mintimer")) || 0;
+let sec = JSON.parse(localStorage.getItem("sectimer")) || 0;
 let stoptime = true;
 let counter= setInterval("timerCycle()", 1000)
 
